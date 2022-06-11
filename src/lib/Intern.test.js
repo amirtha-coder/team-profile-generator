@@ -1,7 +1,7 @@
 describe("getSchool", () => {
   it("should return the expected school", () => {
-    const school = "coding-School";
-    const actual = intern.getGithubUsername();
+    const school = "coding-school";
+    const actual = intern.getSchool();
     expect(actual).toEqual(school);
   });
 });

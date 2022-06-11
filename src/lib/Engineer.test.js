@@ -5,6 +5,7 @@ describe("getGithubUsername", () => {
     expect(actual).toEqual(username);
   });
 });
+
 describe("getRole", () => {
   it("should return the role of engineer", () => {
     const engineer = "engineer";
