@@ -16,6 +16,13 @@
       href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Sample Profile Generator</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
@@ -48,14 +55,24 @@
         >
           <!-- Manager div -->
           <div class="accordion-body d-flex justify-content-center">
-            <strong>This is the first item's accordion body.</strong> It is
-            shown by default, until the collapse plugin adds the appropriate
-            classes that we use to style each element. These classes control the
-            overall appearance, as well as the showing and hiding via CSS
-            transitions. You can modify any of this with custom CSS or
-            overriding our default variables. It's also worth noting that just
-            about any HTML can go within the <code>.accordion-body</code>,
-            though the transition does limit overflow.
+            <div class="card mx-3">
+              <div class="card-header employees-manager">ID:${id}</div>
+              <div class="card-body">
+                <h5 class="card-title">${Name}</h5>
+                <ul>
+                  <li>
+                    Email:
+                    <a href="mailto:amirtha.m.muthirulandi@gmail.com">
+                      ${email}</a
+                    >
+                  </li>
+                  <li>
+                   Office No. : ${officeNumber}
+                  </li>
+                </ul>
+                <p class="card-text"></p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -78,15 +95,72 @@
           aria-labelledby="panelsStayOpen-headingTwo"
         >
           <!-- Engineer div -->
-          <div class="accordion-body d-flex justify-content-center">
-            <strong>This is the second item's accordion body.</strong> It is
-            hidden by default, until the collapse plugin adds the appropriate
-            classes that we use to style each element. These classes control the
-            overall appearance, as well as the showing and hiding via CSS
-            transitions. You can modify any of this with custom CSS or
-            overriding our default variables. It's also worth noting that just
-            about any HTML can go within the <code>.accordion-body</code>,
-            though the transition does limit overflow.
+          <div class="accordion-body d-flex justify-content-center flex-wrap">
+            <div class="card mx-3 my-2">
+              <div class="card-header employees-engineer">ID:${id}</div>
+              <div class="card-body">
+                <h5 class="card-title">${Name}</h5>
+                <ul>
+                  <li>
+                    Email:
+                    <a href="mailto:amirtha.m.muthirulandi@gmail.com">
+                      ${email}</a
+                    >
+                  </li>
+                  <li>
+                      <i class="fa-brands fa-github"></i
+                    > :
+                    <a href="https://github.com/${username}"> Click here</a>
+                      </a>
+                  </li>
+                </ul>
+                <p class="card-text"></p>
+              </div>
+            </div>
+            <!-- card 2 -->
+            <div class="card mx-3 my-2">
+              <div class="card-header employees-engineer">ID:${id}</div>
+              <div class="card-body">
+                <h5 class="card-title">${Name}</h5>
+                <ul>
+                  <li>
+                    Email:
+                    <a href="mailto:amirtha.m.muthirulandi@gmail.com">
+                      ${email}</a
+                    >
+                  </li>
+                  <li>
+                      <i class="fa-brands fa-github"></i
+                    > :
+                    <a href="https://github.com/${username}"> Click here</a>
+                      </a>
+                  </li>
+                </ul>
+                <p class="card-text"></p>
+              </div>
+            </div>
+            <!-- card 3 -->
+            <div class="card mx-3 my-2">
+              <div class="card-header employees-engineer">ID:${id}</div>
+              <div class="card-body">
+                <h5 class="card-title">${Name}</h5>
+                <ul>
+                  <li>
+                    Email:
+                    <a href="mailto:amirtha.m.muthirulandi@gmail.com">
+                      ${email}</a
+                    >
+                  </li>
+                  <li>
+                      <i class="fa-brands fa-github"></i
+                    > :
+                    <a href="https://github.com/${username}"> Click here</a>
+                      </a>
+                  </li>
+                </ul>
+                <p class="card-text"></p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -109,15 +183,40 @@
           aria-labelledby="panelsStayOpen-headingThree"
         >
           <!-- Intern Div -->
-          <div class="accordion-body d-flex justify-content-center">
-            <strong>This is the third item's accordion body.</strong> It is
-            hidden by default, until the collapse plugin adds the appropriate
-            classes that we use to style each element. These classes control the
-            overall appearance, as well as the showing and hiding via CSS
-            transitions. You can modify any of this with custom CSS or
-            overriding our default variables. It's also worth noting that just
-            about any HTML can go within the <code>.accordion-body</code>,
-            though the transition does limit overflow.
+          <div class="accordion-body d-flex justify-content-center flex-wrap">
+            <div class="card mx-3 my-2">
+              <div class="card-header employees-intern">ID:${id}</div>
+              <div class="card-body">
+                <h5 class="card-title">${Name}</h5>
+                <ul>
+                  <li>
+                    Email:
+                    <a href="mailto:amirtha.m.muthirulandi@gmail.com">
+                      ${email}</a
+                    >
+                  </li>
+                  <li>School: ${school}</li>
+                </ul>
+                <p class="card-text"></p>
+              </div>
+            </div>
+            <!-- card 2 -->
+            <div class="card mx-3 my-2">
+              <div class="card-header">ID:${id}</div>
+              <div class="card-body">
+                <h5 class="card-title">${Name}</h5>
+                <ul>
+                  <li>
+                    Email:
+                    <a href="mailto:amirtha.m.muthirulandi@gmail.com">
+                      ${email}</a
+                    >
+                  </li>
+                  <li>School: ${school}</li>
+                </ul>
+                <p class="card-text"></p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
