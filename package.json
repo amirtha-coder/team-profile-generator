@@ -4,7 +4,7 @@
   "description": "A Node.JS application that, with the help of classes, creates a profile for a manager, engineer and intern in a team",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node src/index.js",
     "test": "jest",
     "test:watch": "jest --watch"
   },
