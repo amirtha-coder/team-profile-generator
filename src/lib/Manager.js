@@ -1,3 +1,4 @@
+const Employee = require("./Employee");
 // add a class for the employee
 
 // add a function to get name
