@@ -1,5 +1,6 @@
+const Manager = require("./Manager");
 describe("getName", () => {
-  it("should be an instance of an Employee", () => {
+  it("should be an instance of a Manager", () => {
     const manager = new Manager("Sarah");
     const actual = manager.getName();
     expect(actual).toEqual("Sarah");
@@ -34,7 +35,7 @@ describe("getOfficeNumber", () => {
   it("should return the expected office number", () => {
     const manager = new Manager();
     manager.officeNumber = "123489962";
-    const actual = manager.getSchool();
+    const actual = manager.getOfficeNumber();
     expect(actual).toEqual("123489962");
   });
 });
