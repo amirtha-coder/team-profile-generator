@@ -2,79 +2,8 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 
-const getEngineerQuestions = () => {
-  console.log("success");
-};
-// create an arry of engineer questions
-const engineerQuestions = [
-  {
-    type: "input",
-    message: "please enter your engineer's name",
-    name: "engineerName",
-    validate: (answer) => {
-      return answer ? true : "Please enter the engineer's details to continue";
-    },
-  },
-  {
-    type: "input",
-    message: "Please enter your engineer ID:",
-    name: "engineerID",
-    validate: (answer) => {
-      return answer ? true : "Please enter the engineer's details to continue";
-    },
-  },
-  {
-    type: "input",
-    message: "Please enter engineer's email address:",
-    name: "engineerEmailAdress",
-    validate: (answer) => {
-      return answer ? true : "Please enter the engineer's details to continue";
-    },
-  },
-  {
-    type: "input",
-    message: "Please enter engineer's github username",
-    name: "engineerGithubUsername",
-    validate: (answer) => {
-      return answer ? true : "Please enter the engineer's details to continue";
-    },
-  },
-];
-// get an array of intern questions
-const internQuestions = [
-  {
-    type: "input",
-    message: "please enter your intern's name",
-    name: "internName",
-    validate: (answer) => {
-      return answer ? true : "Please enter the intern's details to continue";
-    },
-  },
-  {
-    type: "input",
-    message: "Please enter your intern ID:",
-    name: "internID",
-    validate: (answer) => {
-      return answer ? true : "Please enter the manager's details to continue";
-    },
-  },
-  {
-    type: "input",
-    message: "Please enter intern's email address:",
-    name: "internEmailAdress",
-    validate: (answer) => {
-      return answer ? true : "Please enter the intern's details to continue";
-    },
-  },
-  {
-    type: "input",
-    message: "Please enter intern's scholl",
-    name: "internSchool",
-    validate: (answer) => {
-      return answer ? true : "Please enter the intern's details to continue";
-    },
-  },
-];
+const employees = [];
+
 // declare questions array
 const starterQuestions = [
   {
@@ -109,6 +38,9 @@ const starterQuestions = [
       return answer ? true : "Please enter the manager's details to continue";
     },
   },
+];
+
+const choiceQuestions = [
   {
     type: "list",
     message: "Who would you like to add next?",
@@ -117,32 +49,115 @@ const starterQuestions = [
         name: "Add an engineer",
         value: "engineer",
         short: "engineer",
-        // when: (answer) => {
-        //   if (true) {
-        //     getEngineerQuestions();
-        //   }
-        // },
+        loop: true,
       },
       {
         name: "Add an intern",
         value: "intern",
         short: "intern",
+        loop: true,
       },
       {
         name: "Quit||no more employees needed",
         value: "quit",
         short: "quit",
+        loop: false,
       },
     ],
     name: "addAnother",
+  },
+  {
+    type: "input",
+    message: "please enter your engineer's name",
+    name: "engineerName",
+    when: (answers) => answers.addAnother === "engineer",
+    validate: (answer) => {
+      return answer ? true : "Please enter the engineer's details to continue";
+    },
+  },
+  {
+    type: "input",
+    message: "Please enter your engineer ID:",
+    name: "engineerID",
+    when: (answers) => answers.addAnother === "engineer",
+    validate: (answer) => {
+      return answer ? true : "Please enter the engineer's details to continue";
+    },
+  },
+  {
+    type: "input",
+    message: "Please enter engineer's email address:",
+    name: "engineerEmailAdress",
+    when: (answers) => answers.addAnother === "engineer",
+    validate: (answer) => {
+      return answer ? true : "Please enter the engineer's details to continue";
+    },
+  },
+  {
+    type: "input",
+    message: "Please enter engineer's github username",
+    name: "engineerGithubUsername",
+    when: (answers) => answers.addAnother === "engineer",
+    validate: (answer) => {
+      return answer ? true : "Please enter the engineer's details to continue";
+    },
+  },
+  {
+    type: "input",
+    message: "please enter your intern's name",
+    name: "internName",
+    when: (answers) => answers.addAnother === "intern",
+    validate: (answer) => {
+      return answer ? true : "Please enter the intern's details to continue";
+    },
+  },
+  {
+    type: "input",
+    message: "Please enter your intern ID:",
+    name: "internID",
+    when: (answers) => answers.addAnother === "intern",
+    validate: (answer) => {
+      return answer ? true : "Please enter the manager's details to continue";
+    },
+  },
+  {
+    type: "input",
+    message: "Please enter intern's email address:",
+    name: "internEmailAddress",
+    when: (answers) => answers.addAnother === "intern",
+    validate: (answer) => {
+      return answer ? true : "Please enter the intern's details to continue";
+    },
+  },
+  {
+    type: "input",
+    message: "Please enter intern's school",
+    name: "internSchool",
+    when: (answers) => answers.addAnother === "intern",
+    validate: (answer) => {
+      return answer ? true : "Please enter the intern's details to continue";
+    },
   },
 ];
 
 // declare an init function
 const init = async () => {
-  const answers = await inquirer.prompt(starterQuestions);
+  const initialAnswers = await inquirer.prompt(starterQuestions);
+  const addedManager = employees.push(initialAnswers);
+  const answers = await inquirer.prompt(choiceQuestions);
+  if (answers.addAnother === "quit") {
+    console.log(answers);
+    return employees.push(answers);
+  }
 
-  console.log(answers);
+  //   if (answers.addAnother.engineer) {
+  //     // create an arry of engineer questions
+  //     const answers = await inquirer.prompt(engineerQuestions);
+  //     console.log(answers);
+  //   }
+
+  console.log(addedManager);
 };
+
 // call the init function
 init();
