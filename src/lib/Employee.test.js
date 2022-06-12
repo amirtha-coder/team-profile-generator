@@ -1,3 +1,5 @@
+const Employee = require("./Employee");
+
 describe("getName", () => {
   it("should be an instance of an Employee", () => {
     const employee = new Employee("Sarah");
@@ -7,30 +9,34 @@ describe("getName", () => {
 });
 describe("getName", () => {
   it("should return the expected name", () => {
-    const employee = "Sarah";
+    const employee = new Employee();
+    employee.name = "Sarah";
     const actual = employee.getName();
-    expect(actual).toEqual(employee);
+    expect(actual).toEqual("Sarah");
   });
 });
 
 describe("getId", () => {
   it("should return the expected id", () => {
-    const id = "1234567";
+    const employee = new Employee();
+    employee.id = "1234567";
     const actual = employee.getId();
-    expect(actual).toEqual(id);
+    expect(actual).toEqual("1234567");
   });
 });
 describe("getEmail", () => {
   it("should return the expected email", () => {
-    const email = "samsmith@email.com";
+    const employee = new Employee();
+    employee.email = "samsmith@email.com";
     const actual = employee.getEmail();
-    expect(actual).toEqual(email);
+    expect(actual).toEqual("samsmith@email.com");
   });
 });
 describe("getRole", () => {
   it("should return the role of Employee", () => {
-    const employee = "Employee";
+    const employee = new Employee();
+    employee.role = "Employee";
     const actual = employee.getRole();
-    expect(actual).toEqual(employee);
+    expect(actual).toEqual("Employee");
   });
 });
