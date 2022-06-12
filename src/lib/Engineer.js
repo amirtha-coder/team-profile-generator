@@ -14,7 +14,7 @@ class Engineer extends Employee {
   }
   //  add a function to get role
   getRole() {
-    return "Engineer";
+    return this.role;
   }
 }
 
