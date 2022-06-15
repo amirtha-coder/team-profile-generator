@@ -276,7 +276,7 @@ const init = async () => {
       referrerpolicy="no-referrer"
     />
     <title>Sample Profile Generator</title>
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
   </head>
   <body>
     <!-- header title 1 -->

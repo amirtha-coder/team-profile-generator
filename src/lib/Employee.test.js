@@ -1,6 +1,6 @@
 const Employee = require("./Employee");
 
-describe("getName", () => {
+describe("Employee", () => {
   it("should be an instance of an Employee", () => {
     const employee = new Employee("Sarah");
     const actual = employee.getName();
