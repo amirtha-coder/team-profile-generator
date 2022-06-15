@@ -8,10 +8,12 @@ class Engineer extends Employee {
     this.githubUsername = githubUsername;
     this.role = "Engineer";
   }
+
   //   add a function to get Username
   getGithubUsername() {
     return this.githubUsername;
   }
+
   //  add a function to get role
   getRole() {
     return this.role;
