@@ -2,96 +2,34 @@
 
 A Node.JS application that, with the help of classes, creates a profile for a manager, engineer and intern in a team
 
-Packages
+# Demonstration Video
 
-- inquirer
-- jest (dev)
-- @types/jest (dev)
+Please click [here](https://www.loom.com/share/dfbf44aff6d44e35a07b2e351537312e) to view.
 
-Sequence of questions:
+## Description
 
-(optional question)
+This is a Node.JS application that produces a customisable readme that can be used for any project. The application requires the users to follow the installation and usage below. On load of the repository, users will be prompted with a series of questions by the inquirer package. Most questions requires an input but the license question will ask the user to select from a list of popular licenses. Once all the questions are answered a readme is generated. This GENERATED_README.md will contain the markdown for the README changes that you have specified. The markdown contains code blocks and links to the repository via the username that you have typed in. The badge alongside the project title should also alter when you select another license.
 
-1. Please enter team name:
+## Installation
 
-(manager questions)
+```
+git clone git@github.com:amirtha-coder/readme-generator-app.git
 
-1. Please enter manager name:
-2. Please enter manager ID:
-3. Please enter manager email address:
-4. Please enter manager office number:
+cd team-profile-generator
 
-5. What would you like to do next:
+npm install
+```
 
-- Add an engineer
-- Add an intern
-- Quit application
+## Usage
 
-(engineer questions)
+```
+npm run start
+```
 
-1. Please enter engineer name:
-2. Please enter engineer ID:
-3. Please enter engineer email address:
-4. Please enter engineer github username:
+## Screenshots
 
-5. What would you like to do next:
+![Screenshot 1](./images/Readme1.png)
 
-- Add an engineer
-- Add an intern
-- Quit application
+![Screenshot 2](./images/Readme2.png)
 
-(intern questions)
-
-1. Please enter intern name:
-2. Please enter intern ID:
-3. Please enter intern email address:
-4. Please enter intern school:
-
-5. What would you like to do next:
-
-- Add an engineer
-- Add an intern
-- Quit application
-
-Employee Test Cases
-
-- should be an instance of an Employee
-- should return the expected name
-- should return the expected id
-- should return the expected email
-- should return the role of Employee
-
-Intern Test Cases
-
-- should be an instance of an Intern
-- should return the expected name
-- should return the expected id
-- should return the expected email
-- should return the expected school
-- should return the role of Intern
-
-Engineer Test Cases
-
-- should be an instance of an Engineer
-- should return the expected name
-- should return the expected id
-- should return the expected email
-- should return the expected github username
-- should return the role of Engineer
-
-Manager Test Cases
-
-- should be an instance of an Manager
-- should return the expected name
-- should return the expected id
-- should return the expected email
-- should return the expected office number
-- should return the role of Manager
-
-Preferred Order:
-
-- Setup files and folders
-- complete the styled sample team profile html file
-- setup your classes (lib) and add tests
-- write code to pass tests
-- inquirer questions and complete application
+![Screenshot 3](./images/Readme3.png)

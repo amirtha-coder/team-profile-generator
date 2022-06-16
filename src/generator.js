@@ -1,4 +1,8 @@
+const fs = require("fs");
+const path = require("path");
 
+const generateHTML = (managerCards, internCards, engineerCards) => {
+  const html = `
       <!DOCTYPE html>
     <html lang="en">
       <head>
@@ -54,24 +58,7 @@
               aria-labelledby="panelsStayOpen-headingOne"
             >
               <div class="accordion-body d-flex justify-content-center">
-              <div class="card mx-3 cards">
-              <div class="card-header employees-manager">ID:s</div>
-              <div class="card-body">
-                <h5 class="card-title">s</h5>
-                <ul>
-                  <li>
-                    Email:
-                    <a href="mailto:amirtha.m.muthirulandi@gmail.com">
-                      s</a
-                    >
-                  </li>
-                  <li>
-                   Office No. : s
-                  </li>
-                </ul>
-                <p class="card-text"></p>
-              </div>
-            </div>
+              ${[...managerCards]}
               </div>
             </div>
           </div>
@@ -94,67 +81,7 @@
               aria-labelledby="panelsStayOpen-headingTwo"
             >
               <div class="accordion-body d-flex justify-content-center flex-wrap">
-                <div class="card mx-3 my-2 cards">
-              <div class="card-header employees-engineer">ID:g</div>
-              <div class="card-body">
-                <h5 class="card-title">g</h5>
-                <ul>
-                  <li>
-                    Email:
-                    <a href="mailto:amirtha.m.muthirulandi@gmail.com">
-                      g</a
-                    >
-                  </li>
-                  <li>
-                      <i class="fa-brands fa-github"></i
-                    > :
-                    <a href="https://github.com/g" target="_blank"> Click here</a>
-                      </a>
-                  </li>
-                </ul>
-                <p class="card-text"></p>
-              </div>
-            </div>,<div class="card mx-3 my-2 cards">
-              <div class="card-header employees-engineer">ID:t</div>
-              <div class="card-body">
-                <h5 class="card-title">t</h5>
-                <ul>
-                  <li>
-                    Email:
-                    <a href="mailto:amirtha.m.muthirulandi@gmail.com">
-                      t</a
-                    >
-                  </li>
-                  <li>
-                      <i class="fa-brands fa-github"></i
-                    > :
-                    <a href="https://github.com/t" target="_blank"> Click here</a>
-                      </a>
-                  </li>
-                </ul>
-                <p class="card-text"></p>
-              </div>
-            </div>,<div class="card mx-3 my-2 cards">
-              <div class="card-header employees-engineer">ID:r</div>
-              <div class="card-body">
-                <h5 class="card-title">r</h5>
-                <ul>
-                  <li>
-                    Email:
-                    <a href="mailto:amirtha.m.muthirulandi@gmail.com">
-                      r</a
-                    >
-                  </li>
-                  <li>
-                      <i class="fa-brands fa-github"></i
-                    > :
-                    <a href="https://github.com/r" target="_blank"> Click here</a>
-                      </a>
-                  </li>
-                </ul>
-                <p class="card-text"></p>
-              </div>
-            </div>
+                ${[...engineerCards]}
               </div>
             </div>
           </div>
@@ -177,37 +104,7 @@
               aria-labelledby="panelsStayOpen-headingThree"
             >
               <div class="accordion-body d-flex justify-content-center flex-wrap">
-              <div class="card mx-3 my-2 cards">
-              <div class="card-header employees-intern">ID:f</div>
-              <div class="card-body">
-                <h5 class="card-title">f</h5>
-                <ul>
-                  <li>
-                    Email:
-                    <a href="mailto:amirtha.m.muthirulandi@gmail.com">
-                      Intern</a
-                    >
-                  </li>
-                  <li>School: f</li>
-                </ul>
-                <p class="card-text"></p>
-              </div>
-            </div>,<div class="card mx-3 my-2 cards">
-              <div class="card-header employees-intern">ID:j</div>
-              <div class="card-body">
-                <h5 class="card-title">j</h5>
-                <ul>
-                  <li>
-                    Email:
-                    <a href="mailto:amirtha.m.muthirulandi@gmail.com">
-                      Intern</a
-                    >
-                  </li>
-                  <li>School: j</li>
-                </ul>
-                <p class="card-text"></p>
-              </div>
-            </div>
+              ${[...internCards]}
               </div>
             </div>
           </div>
@@ -224,4 +121,10 @@
         ></script>
       </body>
     </html>
-    
+    `;
+  // write html to file
+  console.log(html);
+  fs.writeFileSync(path.join(__dirname, "../dist", "index.html"), html);
+};
+
+module.exports = { generateHTML };

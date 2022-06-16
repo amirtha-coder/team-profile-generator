@@ -24,12 +24,12 @@
       referrerpolicy="no-referrer"
     />
     <title>Sample Profile Generator</title>
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
   </head>
   <body>
     <!-- header title 1 -->
     <header>
-      <h1 class="title">Our Team</h1>
+      <h1 class="title">Employees in Our Team</h1>
     </header>
     <div class="accordion" id="accordionPanelsStayOpenExample">
       <div class="accordion-item my-2">
@@ -53,7 +53,7 @@
           class="accordion-collapse collapse show"
           aria-labelledby="panelsStayOpen-headingOne"
         >
-          <!-- Manager div -->
+         
           <div class="accordion-body d-flex justify-content-center">
             <div class="card mx-3 cards">
               <div class="card-header employees-manager">ID:${id}</div>
@@ -94,52 +94,9 @@
           class="accordion-collapse collapse"
           aria-labelledby="panelsStayOpen-headingTwo"
         >
-          <!-- Engineer div -->
+       
           <div class="accordion-body d-flex justify-content-center flex-wrap">
-            <div class="card mx-3 my-2 cards">
-              <div class="card-header employees-engineer">ID:${id}</div>
-              <div class="card-body">
-                <h5 class="card-title">${Name}</h5>
-                <ul>
-                  <li>
-                    Email:
-                    <a href="mailto:amirtha.m.muthirulandi@gmail.com">
-                      ${email}</a
-                    >
-                  </li>
-                  <li>
-                      <i class="fa-brands fa-github"></i
-                    > :
-                    <a href="https://github.com/${username}" target="_blank"> Click here</a>
-                      </a>
-                  </li>
-                </ul>
-                <p class="card-text"></p>
-              </div>
-            </div>
-            <!-- card 2 -->
-            <div class="card mx-3 my-2 cards">
-              <div class="card-header employees-engineer">ID:${id}</div>
-              <div class="card-body">
-                <h5 class="card-title">${Name}</h5>
-                <ul>
-                  <li>
-                    Email:
-                    <a href="mailto:amirtha.m.muthirulandi@gmail.com">
-                      ${email}</a
-                    >
-                  </li>
-                  <li>
-                      <i class="fa-brands fa-github"></i
-                    > :
-                    <a href="https://github.com/${username}" target="_blank"> Click here</a>
-                      </a>
-                  </li>
-                </ul>
-                <p class="card-text"></p>
-              </div>
-            </div>
-            <!-- card 3 -->
+        
             <div class="card mx-3 my-2 cards">
               <div class="card-header employees-engineer">ID:${id}</div>
               <div class="card-body">
@@ -182,7 +139,7 @@
           class="accordion-collapse collapse"
           aria-labelledby="panelsStayOpen-headingThree"
         >
-          <!-- Intern Div -->
+      
           <div class="accordion-body d-flex justify-content-center flex-wrap">
             <div class="card mx-3 my-2 cards">
               <div class="card-header employees-intern">ID:${id}</div>
@@ -200,23 +157,7 @@
                 <p class="card-text"></p>
               </div>
             </div>
-            <!-- card 2 -->
-            <div class="card mx-3 my-2 cards">
-              <div class="card-header"> ID:${id}</div>
-              <div class="card-body">
-                <h5 class="card-title">${Name}</h5>
-                <ul>
-                  <li>
-                    Email:
-                    <a href="mailto:amirtha.m.muthirulandi@gmail.com">
-                      ${email}</a
-                    >
-                  </li>
-                  <li>School: ${school}</li>
-                </ul>
-                <p class="card-text"></p>
-              </div>
-            </div>
+  
           </div>
         </div>
       </div>
