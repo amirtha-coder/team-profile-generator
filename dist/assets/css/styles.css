@@ -1,0 +1,45 @@
+:root {
+  /* CSS HEX */
+  --minion-yellow: #ffe74cff;
+  --fiery-rose: #ff5964ff;
+  --white: #ffffffff;
+  --screamin-green: #6bf178ff;
+  --blue-jeans: #35a7ffff;
+  font-size: 16px;
+}
+
+.title {
+  background-color: var(--fiery-rose);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  color: white;
+  font-size: 7rem;
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  font-weight: 500;
+}
+
+/* add background colour to each of the accordian items */
+.employees-manager {
+  background-color: var(--minion-yellow);
+}
+.employees-engineer {
+  background-color: var(--blue-jeans);
+}
+.employees-intern {
+  background-color: var(--screamin-green);
+}
+
+ul,
+li {
+  list-style: none;
+  padding-left: 0;
+}
+
+.cards {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.cards:hover {
+  transform: scale(1.05);
+}

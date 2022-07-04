@@ -1,0 +1,29 @@
+{
+  "name": "team-profile-generator",
+  "version": "1.0.0",
+  "description": "A Node.JS application that, with the help of classes, creates a profile for a manager, engineer and intern in a team",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amirtha-coder/team-profile-generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amirtha-coder/team-profile-generator/issues"
+  },
+  "homepage": "https://github.com/amirtha-coder/team-profile-generator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  },
+  "devDependencies": {
+    "@types/jest": "^28.1.1",
+    "jest": "^28.1.1"
+  }
+}
